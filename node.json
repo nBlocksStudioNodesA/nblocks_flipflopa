@@ -1,0 +1,21 @@
+{
+    "category": "Function",
+    "name": "FlipFlopA",
+    "inputs": 1,
+    "outputs": 1,
+    "parameters": [],
+    "labels": {
+        "input": [],
+        "output": []
+    },
+    "schematic_pins": {
+        "inputs": [
+            1
+        ],
+        "outputs": [
+            2
+        ]
+    },
+    "repository": "https://github.com/nBlocksStudioNodes/nblocks_flipflopa",
+    "revision": ""
+}
