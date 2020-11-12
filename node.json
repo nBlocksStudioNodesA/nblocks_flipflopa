@@ -1,6 +1,6 @@
 {
     "category": "Function",
-    "name": "FlipFlop",
+    "name": "FlipFlopA",
     "inputs": 1,
     "outputs": 1,
     "parameters": [],
@@ -16,6 +16,6 @@
             2
         ]
     },
-    "repository": "https://github.com/nBlocksStudioNodesA/nblocks_flipflop",
+    "repository": "https://github.com/nBlocksStudioNodesA/nblocks_flipflopa",
     "revision": ""
 }

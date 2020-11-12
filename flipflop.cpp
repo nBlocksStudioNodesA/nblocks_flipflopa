@@ -1,7 +1,7 @@
-#include "flipflop.h"
+#include "flipflopA.h"
 
 // FLIP FLOP
-nBlock_FlipFlop::nBlock_FlipFlop(uint32_t triggerMode) {
+nBlock_FlipFlopA::nBlock_FlipFlopA(uint32_t triggerMode) {
     _triggerMode = triggerMode;
     // The following 2 variables should be frozen during a frame
     // and should only be changed in the step method (end of frame)
@@ -15,10 +15,10 @@ nBlock_FlipFlop::nBlock_FlipFlop(uint32_t triggerMode) {
     _available[0] = 0;
     return;
 }
-uint32_t nBlock_FlipFlop::outputAvailable(uint32_t outputNumber) { return _exposed_available[outputNumber]; }
-uint32_t nBlock_FlipFlop::readOutput(uint32_t outputNumber) { return _exposed_output[outputNumber]; }
+uint32_t nBlock_FlipFlopA::outputAvailable(uint32_t outputNumber) { return _exposed_available[outputNumber]; }
+uint32_t nBlock_FlipFlopA::readOutput(uint32_t outputNumber) { return _exposed_output[outputNumber]; }
 
-void nBlock_FlipFlop::triggerInput(nBlocks_Message message) { // inputNumber is ignored
+void nBlock_FlipFlopA::triggerInput(nBlocks_Message message) { // inputNumber is ignored
     // If value is adequate to the trigger mode, act on output
     if (
             (_triggerMode == triggerMode_Both) ||                        // if triggers on anything, or
@@ -31,7 +31,7 @@ void nBlock_FlipFlop::triggerInput(nBlocks_Message message) { // inputNumber is 
         _available[0] = 1;
     }
 }
-void nBlock_FlipFlop::step(void) {
+void nBlock_FlipFlopA::step(void) {
     int i;
     for (i=0; i < 1/*Number of outputs*/; i++) {
         _exposed_output[i] = _output[i];

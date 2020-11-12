@@ -1,5 +1,5 @@
-#ifndef __NB_FLIPFLOP_ARDUINO
-#define __NB_FLIPFLOP_ARDUINO
+#ifndef __NB_FLIPFLOPA_ARDUINO
+#define __NB_FLIPFLOPA_ARDUINO
 
 
 #include "../nworkbench.h"
@@ -13,14 +13,14 @@ THIS NODE IS A REFERENCE EXAMPLE OF HOW TO IMPLEMENT USING THE RAW NODE CLASS
 =============================================================================
 */
 
-class nBlock_FlipFlop: public nBlockNode {
+class nBlock_FlipFlopA: public nBlockNode {
 public:
     // This flip flop has configurable edge. Not specifying it means positive edge
     // positive edge means it will be triggered by values > 0
     // Both means triggered by any value update
     enum {triggerMode_Positive, triggerMode_Zero, triggerMode_Both};
 
-    nBlock_FlipFlop(uint32_t triggerMode = triggerMode_Positive);
+    nBlock_FlipFlopA(uint32_t triggerMode = triggerMode_Positive);
     uint32_t outputAvailable(uint32_t outputNumber);
     uint32_t readOutput(uint32_t outputNumber);
     void triggerInput(nBlocks_Message message);
